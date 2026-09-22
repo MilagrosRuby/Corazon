@@ -1,4 +1,28 @@
-def __init__(self, x, y, order, kind):
+        import math
+import random
+import pygame
+
+WIDTH, HEIGHT = 2000, 1200
+BACKGROUND_COLOR = (0, 0, 0)
+FPS = 60
+SCALE = 20
+
+
+WORDS = ["love you", "Love You", "LOVE YOU"]
+CENTER_TEXT = " Love You "
+COLORS = [
+    (70, 130, 180),
+    (30, 144, 255),  
+    (0, 191, 255),  
+    (100, 149, 237), 
+    (65, 105, 225)
+    ]
+
+
+class Particle:
+    __slots__ = ('x', 'y', 'order', 'kind', 'word', 'color', 'alpha', 'flicker', 'font', 'delay', 'size_mult')
+    
+    def __init__(self, x, y, order, kind):
         self.x = x
         self.y = y
         self.order = order
@@ -186,4 +210,4 @@ if __name__ == "__main__":
     except Exception as e:
         print("OCURRIO UN ERROR:", e)
         import traceback
-        traceback.print_exc() 
+        traceback.print_exc()
